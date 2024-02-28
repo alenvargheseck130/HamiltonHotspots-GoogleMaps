@@ -1,0 +1,125 @@
+<!--StAuth10244: I Alen Varghese Cheruvally Kunjumon, 000837873 certify that this material is my original work.
+No other person's work has been used without due acknowledgement. I have not made my work available to anyone else.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilton's Hotspots</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        #map {
+            height: 650px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar sticky-top bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-semibold text-wrap" href="#">Hamilton's Hotspots: Your key to explore stunning waterfalls.</a>
+    </div>
+  </nav>    
+<!--div id for the map-->
+    <div class="col-xs-12" id="map">
+
+    </div>
+<br><br><br>
+    <!--Container for geolocation, geocoding and filter system-->
+    <div class="container">
+        <div class="row">
+          <div  class="col-md-4 col-xl-5">
+            <h2>Filter by Community !!</h2>
+            <br>
+            <p><strong>Choose from the list of buttons to select the waterfall by community.</strong>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            <div class="container">
+                <div class="row">
+                        <div  class="col-12 col-md-4 "><button class="btn btn-light" type="button"id="dundas"><strong>Dundas</strong></button></div>
+                        <div  class="col-12 col-md-4 "><button class="btn btn-light" type="button"id="hamilton"><strong>Hamilton</strong></button></div>
+                        <div  class="col-12 col-md-4 "><button class="btn btn-light" type="button"id="stoney_creek"><strong>Stoney Creek</strong></button></div>
+                    
+                </div>
+                <div class="row">
+                    <div  class="col-12 col-md-4 "><button class="btn btn-light" type="button"id="flamborough"><strong>Flamborough</strong></button></div>
+                    <div  class="col-12 col-md-4 "><button class="btn btn-light" type="button"id="ancaster"><strong>Ancaster</strong></button></div>
+                    <div  class="col-12 col-md-4 "><button class="btn btn-light" type="button"id="show_all"><strong>Show All</strong></button></div>
+                </div>
+            </div>
+            
+        </div>
+        <div  class="col-md-4 col-xl">
+            <h2>Geolocation</h2>
+            <p><strong>Mark your current location on the map by clicking the button below.</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi minus molestiae, quas fuga eius vero ad adipisci illo totam aut, dicta non repellendus ipsum qui sed corrupti iusto odit fugiat!</p>
+            <div  class="col-4 "><button class="btn btn-light" type="button"id="geolocate"><strong>Geolocate</strong></button></div>
+        </div>
+        <div  class="col-md-4 col-xl">
+            <h2>Mark your Location</h2>
+            <p><strong>Enter your address in the form below to put a marker on the map.</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi minus molestiae, quas fuga eius vero ad adipisci illo totam aut, dicta non repellendus ipsum qui sed corrupti iusto odit fugiat!</p>
+            <form>
+                <div class="row">
+                  <div class="col-md-8 col-12">
+                    <input id="address" type="text" class="form-control" placeholder="Enter Your Address">
+                  </div>
+                  <div class="col-md-4" col-12>
+                    <button class="btn btn-light" type="button"id="geocode"><strong>Locate</strong></button>
+                  </div>
+                </div>
+                <br>
+            </form>
+        </div>
+        </div>
+    </div>
+ <br><br>
+ <div class="container">
+    <div class="row ">
+        <div class="col-md-8 col-xs-12">
+            <h2 class="text-center">Get Directions!!</h2>
+            <p><strong>Choose from the list of data to set the direction to your location</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi minus molestiae, quas fuga eius vero ad adipisci illo totam aut, dicta non repellendus ipsum qui sed corrupti iusto odit fugiat!.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi minus molestiae, quas fuga eius vero ad adipisci illo totam aut, dicta non repellendus ipsum qui sed corrupti iusto odit fugiat!</p>
+            <select id="destinations" class="form-select" aria-label="Default select example">
+                <option selected>Choose your Destination</option>
+                <option value="66 Livingstone Dr, Hamilton">Lower Sydenham Falls</option>
+                <option value="Mountain Brow Rd.">Upper Quarry Cascade</option>
+                <option value="581 Harvest Road, Dundas">Dundas Falls</option>
+                <option value="Crooks Hollow Rd">Ancaster Heights Falls</option>
+                <option value="10 Dewitt Rd, Hamilton">Canterbury Falls</option>
+                <option value="10 Dewitt Rd, Hamilton">Dewitt Falls</option>
+                <option value="185 Ridge Rd, Stoney Creek">Lower Punchbowl Falls</option>
+                <option value="985 Scenic Dr, Hamilton">Mountview Falls</option>
+                <option value="Kingsview Dr, Stoney Creek">Upper Glendale Falls</option>
+                <option value="Sanatorium Rd, Hamilton">Upper Sanatorium Falls</option>
+                <option value="Crooks Hollow Rd">East Greensville Falls</option>
+                <option value="Hwy 403">East Iroquoia Falls</option>
+                <option value="80 Mill St S, Waterdown">Great Falls</option>
+                <option value="313 Mountain Brow Rd, Burlington">Grindstone Cascade</option>
+                <option value="Old Dundas Rd.">Little Canterbury Falls</option>
+                <option value="811 Montgomery Dr, Ancaster">Little Falls</option>
+                <option value="Beddoe Dr.">Lower Chedoke Falls</option>
+              </select>
+        </div>
+         <div class="col-md-4 col-xs-12">
+            <img class="mx-auto d-none d-md-block img-fluid" src="directions.jpeg" alt="">
+         </div>
+    </div>
+ </div>
+ <br><br>
+    
+    <!--script source for waterFallData.js-->
+    <script src="waterFallData.js"></script>
+
+    <!--script source for bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <!--script source for googlemaps-->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi2a3Y3BCHgpMasjLfcEDW5jjcTW1L6R8&callback=initMap"></script>
+
+    <!--script source for googleMaps.js-->
+    <script src="googleMap.js" ></script>
+
+
+
+</body>
+</html>
